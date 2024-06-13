@@ -17,14 +17,8 @@ class SecoundBirdActivity : AppCompatActivity() {
         binding = ActivitySecoundBirdBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val btnPrev = findViewById<ImageView>(R.id.btnPrev)
-        val btnNext2 = findViewById<ImageView>(R.id.btnNext2)
 
-        btnPrev.setOnClickListener {
-            finish()
-        }
-
-        btnNext2.setOnClickListener{
+        binding.btnNext2.setOnClickListener{
             val intent = Intent (this, ThirdBirdActivity::class.java)
             startActivity(intent)
         }

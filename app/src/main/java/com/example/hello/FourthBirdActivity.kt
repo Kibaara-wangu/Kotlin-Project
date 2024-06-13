@@ -15,16 +15,12 @@ class FourthBirdActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityFourthBirdBinding.inflate(layoutInflater)
-        setContentView(R.layout.activity_fourth_bird)
+        setContentView(binding.root)
 
-        val btnPrev3 = findViewById<ImageView>(R.id.btnPrev3)
-        val btnNext4 = findViewById<ImageView>(R.id.btnNext4)
 
-        btnPrev3.setOnClickListener {
-            finish()
-        }
 
-        btnNext4.setOnClickListener {
+
+        binding.btnNext4.setOnClickListener {
             val intent = Intent(this, FifthBirdActivity::class.java)
             startActivity(intent)
 
